@@ -102,6 +102,10 @@ body{
     font-weight: 700;
     margin: 10px 0px;
 
+    &:hover{
+      text-decoration: none;
+      color:hsl(246, 37%, 60%);
+    }
 
     @include info-collapse{
       margin: 0px 0px;
@@ -127,7 +131,6 @@ body{
   align-items: center;
 
   a{
-    width: 100%;
     padding: 15px;
     box-sizing: border-box;
     font-weight: 900;
@@ -137,15 +140,25 @@ body{
 
   .proceedLink{
     margin-top: 25px;
+    width: 100%;
     background-color: hsl(245, 75%, 52%);
     color:white;
     border-radius: 10px;
-    box-shadow: 0px 15px 40px 0px hsla(0,0%,0%,0.3)
+    box-shadow: 0px 15px 40px 0px hsla(0,0%,0%,0.3);
+
+    &:hover{
+      background-color: hsl(246, 37%, 60%);
+    }
+
   }
 
   .cancelLink{
     color:hsl(224, 23%, 55%);
     margin-top: 15px;
+    
+    &:hover{
+      color:hsl(223, 47%, 23%);
+    }
   }
 }
 
@@ -153,7 +166,8 @@ body{
 footer{
   text-align: center;
   padding-top: 20px;
-
+  font-size: 14px;
+  
   @include footer-collapse{
     position: fixed;
     bottom: 20px;
