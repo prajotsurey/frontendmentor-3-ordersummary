@@ -29,7 +29,13 @@
 }
 
 @mixin column-collapse {
-  @media (max-height:660px) {
+  @media (max-height:660px) and (min-width:520px)  {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width:500px) {
     @content;
   }
 }
@@ -50,6 +56,16 @@ body{
   background-color: hsl(225, 100%, 94%);
   font-family: 'Red Hat Display', sans-serif;
   font-size: 16px;
+
+  background-image: url('images/pattern-background-desktop.svg');
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  @include mobile {
+    background-image: url('images/pattern-background-mobile.svg');
+  }
+
 }
 
 
@@ -63,6 +79,7 @@ body{
   color:hsl(224, 23%, 55%);
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 31px 30px -7px rgba(0,0,0,0.1);
 
   @include column-collapse{
     flex-direction: row;
@@ -213,3 +230,10 @@ footer{
 }
 
 
+.screenReaderOnly{
+  position: absolute;
+  width: 1px;
+  clip: rect(0px, 0px, 0px, 0px);
+  overflow: hidden;
+  white-space: nowrap;
+}

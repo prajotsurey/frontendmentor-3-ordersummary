@@ -35,6 +35,16 @@ body {
   background-color: #e0e8ff;
   font-family: 'Red Hat Display', sans-serif;
   font-size: 16px;
+  background-image: url("images/pattern-background-desktop.svg");
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+  }
 }
 
 .card {
@@ -54,9 +64,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-shadow: 0px 31px 30px -7px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 31px 30px -7px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-height: 660px) {
+@media (max-height: 660px) and (min-width: 520px) {
   .card {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -90,7 +102,7 @@ body {
   background-position: center;
 }
 
-@media (max-height: 660px) {
+@media (max-height: 660px) and (min-width: 520px) {
   .cardBackground {
     border-radius: 15px 0px 0px 15px;
     max-width: 175px;
@@ -240,5 +252,13 @@ footer {
   .noWrap {
     white-space: nowrap;
   }
+}
+
+.screenReaderOnly {
+  position: absolute;
+  width: 1px;
+  clip: rect(0px, 0px, 0px, 0px);
+  overflow: hidden;
+  white-space: nowrap;
 }
 /*# sourceMappingURL=styles.css.map */
