@@ -29,7 +29,7 @@
 }
 
 @mixin column-collapse {
-  @media (min-height:660px) {
+  @media (max-height:660px) {
     @content;
   }
 }
@@ -52,28 +52,22 @@ body{
   font-size: 16px;
 }
 
-#background{
-  width:100%;
-  min-height: 170px;
-  background-size:cover;
-  background-image: url('images/illustration-hero.svg');
-  border-radius: 15px 15px 0px 0px;
-  background-position: center;
-}
+
 
 .card{
-  background-color: #ffffff;
-  border-radius: 15px;
-  color:hsl(224, 23%, 55%);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
   height: fit-content;
   max-width: 335px;
   box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 15px;
+  color:hsl(224, 23%, 55%);
+  display: flex;
+  flex-direction: column;
 
-  // @include column-collapse{
-  //   padding: 20px 20px 20px 20px;
-  // }
+  @include column-collapse{
+    flex-direction: row;
+    max-width: fit-content;
+  }
   
   h1{
     color:hsl(223, 47%, 23%);
@@ -87,6 +81,21 @@ body{
     padding: 0px 10px;
     margin: 0px 0px 25px 0px;
   }
+}
+
+.cardBackground{
+  width:100%;
+  min-height: 170px;
+  background-size:cover;
+  background-image: url('images/illustration-hero.svg');
+  border-radius: 15px 15px 0px 0px;
+  background-position: center;
+
+  @include column-collapse{
+    border-radius: 15px 0px 0px 15px;
+    max-width: 175px;
+  }
+
 }
 
 .cardContent{
