@@ -37,12 +37,19 @@ body {
   font-size: 16px;
 }
 
+#background {
+  width: 100%;
+  min-height: 170px;
+  background-size: cover;
+  background-image: url("images/illustration-hero.svg");
+  border-radius: 15px 15px 0px 0px;
+  background-position: center;
+}
+
 .card {
   background-color: #ffffff;
   border-radius: 15px;
-  padding: 180px 20px 20px 20px;
   color: #7280a7;
-  background-image: url("images/illustration-hero.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   height: -webkit-fit-content;
@@ -64,6 +71,10 @@ body {
   text-align: center;
   padding: 0px 10px;
   margin: 0px 0px 25px 0px;
+}
+
+.cardContent {
+  padding: 20px;
 }
 
 .info {

@@ -28,6 +28,12 @@
   }
 }
 
+@mixin column-collapse {
+  @media (min-height:660px) {
+    @content;
+  }
+}
+
 html{
   height: 100%;
   width: 100%;
@@ -46,18 +52,29 @@ body{
   font-size: 16px;
 }
 
+#background{
+  width:100%;
+  min-height: 170px;
+  background-size:cover;
+  background-image: url('images/illustration-hero.svg');
+  border-radius: 15px 15px 0px 0px;
+  background-position: center;
+}
+
 .card{
   background-color: #ffffff;
   border-radius: 15px;
-  padding: 180px 20px 20px 20px;
   color:hsl(224, 23%, 55%);
-  background-image: url('images/illustration-hero.svg');
   background-size: 100% auto;
   background-repeat: no-repeat;
   height: fit-content;
   max-width: 335px;
   box-sizing: border-box;
 
+  // @include column-collapse{
+  //   padding: 20px 20px 20px 20px;
+  // }
+  
   h1{
     color:hsl(223, 47%, 23%);
     text-align: center;
@@ -70,6 +87,10 @@ body{
     padding: 0px 10px;
     margin: 0px 0px 25px 0px;
   }
+}
+
+.cardContent{
+  padding: 20px;
 }
 
 .info{
