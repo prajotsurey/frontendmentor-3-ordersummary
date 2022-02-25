@@ -29,7 +29,9 @@ body {
   min-height: 100%;
   display: -ms-grid;
   display: grid;
-  place-content: center;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  place-items: center;
   background-color: #e0e8ff;
   font-family: 'Red Hat Display', sans-serif;
   font-size: 16px;
@@ -43,6 +45,12 @@ body {
   background-image: url("images/illustration-hero.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 335px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .card h1 {
@@ -62,10 +70,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -76,6 +84,18 @@ body {
   padding: 15px;
   border-radius: 10px;
   font-size: 14px;
+}
+
+@media (min-width: 320px) {
+  .info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .info .left {
@@ -98,6 +118,13 @@ body {
 .info a {
   color: #3829e0;
   font-weight: 700;
+  margin: 10px 0px;
+}
+
+@media (min-width: 320px) {
+  .info a {
+    margin: 0px 0px;
+  }
 }
 
 .planDetails h2 {
@@ -142,5 +169,27 @@ body {
 .actions .cancelLink {
   color: #7280a7;
   margin-top: 15px;
+}
+
+footer {
+  text-align: center;
+  padding-top: 20px;
+}
+
+@media (min-height: 700px) {
+  footer {
+    position: fixed;
+    bottom: 20px;
+  }
+}
+
+.noWrap {
+  white-space: normal;
+}
+
+@media (min-width: 250px) {
+  .noWrap {
+    white-space: nowrap;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
