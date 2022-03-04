@@ -40,6 +40,12 @@
   }
 }
 
+@mixin remove-height-max {
+  @media (max-width:500px) {
+    @content;
+  }
+}
+
 html{
   height: 100%;
   width: 100%;
@@ -72,7 +78,7 @@ body{
 
 .card{
   height: fit-content;
-  max-width: 335px;
+  max-width: 420px;
   box-sizing: border-box;
   background-color: #ffffff;
   border-radius: 15px;
@@ -80,6 +86,14 @@ body{
   display: flex;
   flex-direction: column;
   box-shadow: 0px 31px 30px -7px rgba(0,0,0,0.1);
+  height: 80%;
+  max-height: 650px;
+  min-height: 590px;
+
+  @include remove-height-max(){
+    max-height: 100%;
+    height: fit-content;
+  }
 
   @include column-collapse{
     flex-direction: row;
@@ -98,9 +112,14 @@ body{
     padding: 0px 10px;
     margin: 0px 0px 25px 0px;
   }
+
+
+
 }
 
 .cardBackground{
+  height: 30%;
+  max-height: 210px;
   width:100%;
   min-height: 170px;
   background-size:cover;
@@ -109,6 +128,7 @@ body{
   background-position: center;
 
   @include column-collapse{
+    height: 100%;
     border-radius: 15px 0px 0px 15px;
     max-width: 175px;
   }
