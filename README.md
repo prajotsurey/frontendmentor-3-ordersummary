@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/prajotsurey/frontendmentor-3-ordersummary)
-- Live Site URL: [Add live site URL here](https://frontendmentor-3-ordersummary.vercel.app/)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-order-summary-card-using-sass-and-html-44TzEE5HM#comment-62193d37145c6a78f07f254c](https://www.frontendmentor.io/solutions/responsive-order-summary-card-using-sass-and-html-44TzEE5HM#comment-62193d37145c6a78f07f254c)
+- Live Site URL: [https://frontendmentor-3-ordersummary.vercel.app/](https://frontendmentor-3-ordersummary.vercel.app/)
 
 ## My process
 
