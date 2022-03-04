@@ -98,6 +98,8 @@ body{
   @include column-collapse{
     flex-direction: row;
     max-width: fit-content;
+    height: fit-content;
+    min-height: auto;
   }
   
   h1{
@@ -128,9 +130,10 @@ body{
   background-position: center;
 
   @include column-collapse{
-    height: 100%;
+    height: auto;
     border-radius: 15px 0px 0px 15px;
     max-width: 175px;
+    max-height: 100%;
   }
 
 }

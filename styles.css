@@ -89,6 +89,10 @@ body {
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: auto;
   }
 }
 
@@ -118,9 +122,10 @@ body {
 
 @media (max-height: 660px) and (min-width: 520px) {
   .cardBackground {
-    height: 100%;
+    height: auto;
     border-radius: 15px 0px 0px 15px;
     max-width: 175px;
+    max-height: 100%;
   }
 }
 
